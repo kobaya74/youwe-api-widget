@@ -1,0 +1,10 @@
+<?php 
+$ApiUrl = $block->getData('api_url');
+?>
+<?php if($ApiUrl): ?>
+    <div class="api-fetch-block" data-mage-init='{"apiFetch":{"ApiUrl": "<?php echo $ApiUrl; ?>"}}'>
+        <h3 class="widget-title"><?= $block->escapeHtml($block->getData('title')) ?></h3>
+        <button id="fetch-users"><?php echo __('Users list'); ?></button>
+        <ul class="users"></ul>
+    </div>
+<?php endif; ?>
